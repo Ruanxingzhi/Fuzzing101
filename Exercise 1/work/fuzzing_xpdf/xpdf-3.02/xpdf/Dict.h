@@ -51,6 +51,7 @@ public:
   // Look up an entry and return the value.  Returns a null object
   // if <key> is not in the dictionary.
   Object *lookup(char *key, Object *obj);
+  Object *lookupLength(char *key, Object *obj);
   Object *lookupNF(char *key, Object *obj);
 
   // Iterative accessors.

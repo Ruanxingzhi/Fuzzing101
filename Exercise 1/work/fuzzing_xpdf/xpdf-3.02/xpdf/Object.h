@@ -168,6 +168,7 @@ public:
   void dictAdd(char *key, Object *val);
   GBool dictIs(char *dictType);
   Object *dictLookup(char *key, Object *obj);
+  Object *dictLookupLength(char *key, Object *obj);
   Object *dictLookupNF(char *key, Object *obj);
   char *dictGetKey(int i);
   Object *dictGetVal(int i, Object *obj);
@@ -251,6 +252,9 @@ inline GBool Object::isDict(char *dictType)
 
 inline Object *Object::dictLookup(char *key, Object *obj)
   { return dict->lookup(key, obj); }
+
+inline Object *Object::dictLookupLength(char *key, Object *obj)
+  { return dict->lookupLength(key, obj); }
 
 inline Object *Object::dictLookupNF(char *key, Object *obj)
   { return dict->lookupNF(key, obj); }

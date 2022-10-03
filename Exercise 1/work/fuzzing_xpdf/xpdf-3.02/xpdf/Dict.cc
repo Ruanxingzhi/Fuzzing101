@@ -76,6 +76,12 @@ Object *Dict::lookup(char *key, Object *obj) {
   return (e = find(key)) ? e->val.fetch(xref, obj) : obj->initNull();
 }
 
+Object *Dict::lookupLength(char *key, Object *obj) {
+  DictEntry *e;
+
+  return (e = find(key)) ? e->val.copy(obj) : obj->initNull();
+}
+
 Object *Dict::lookupNF(char *key, Object *obj) {
   DictEntry *e;
 
