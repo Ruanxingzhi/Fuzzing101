@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Launch",
+      "program": "${workspaceFolder}/xpdf/pdftotext",
+      "args": ["/home/blue/Desktop/workspace/xpdf/bin/crash0.pdf", "-"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": "/home/blue/Desktop/workspace/Fuzzing101/Exercise 1/work/fuzzing_xpdf/xpdf-3.02",
+      "program": "/home/blue/Desktop/workspace/Fuzzing101/Exercise 1/work/fuzzing_xpdf/xpdf-3.02/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
